@@ -6,7 +6,15 @@ from outdoorAir.models import shedWeather
 from collections import Counter
 from math import ceil
 
-def home(request):
+def index(request):
+    last_entry = shedWeather.objects.last()
+    print(last_entry)
+    context = {
+    'last_entry': last_entry,
+    } 
+    return render(request, 'index.html', context=context)
+
+def graph(request):
     labels = []
     data = []
     stats = shedWeather.objects.order_by('dt')
@@ -15,7 +23,7 @@ def home(request):
         labels.append(row.dt)
         data.append(row.bme_temp) 
         
-    return render(request, 'index.html', {
+    return render(request, 'graph.html', {
         'labels': labels,
         'values': data,
     })
