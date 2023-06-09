@@ -1,0 +1,24 @@
+.Good {
+    background-color: #5b9f49; 
+}
+.Moderate {
+    background-color: #ffb92f; 
+}
+.Unhealthy_for_Sensitive_Groups {
+    background-color: #f83;
+}
+.Unhealthy {
+    background-color: #d5202a;
+}
+.Very_Unhealthy {
+    background-color: #802674;
+}
+.Hazardous {
+    background-color: #990008; 
+}
+.Vey_Hazardous {
+    background-color: #d307fc;
+}
+.Invalid {
+    background-color: #e0dede; 
+}
