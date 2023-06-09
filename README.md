@@ -1,1 +1,2 @@
-![alt text](images/Dashboard.JPG "Dashboard"
+![My Image](images/Dashboard.JPG
+
