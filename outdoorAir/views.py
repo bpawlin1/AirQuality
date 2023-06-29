@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import outdoorAirForm, shedWeatherForm
 from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from outdoorAir.models import shedWeather
-
+from django.http import JsonResponse, HttpResponse
 from collections import Counter
 from math import ceil
 
@@ -13,6 +13,7 @@ def index(request):
     'last_entry': last_entry,
     } 
     return render(request, 'index.html', context=context)
+
 
 def graph(request):
     labels = []
